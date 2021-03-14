@@ -1,0 +1,239 @@
+%------------------------------------
+% Macau Metropolis ver 0.01
+% author: Daina Chiba
+% Last modified: 2021-03-15
+%------------------------------------
+
+% Font (Remove the option 'sfdefault' if you don't like sans serif)
+\usepackage[sfdefault,light,condensed]{roboto}
+
+% Math font
+\usepackage{newpxmath} % newtxmath
+
+%------------------------------------
+% Define parameters for the theme
+%------------------------------------
+
+% Load the Metropolis theme
+\usetheme[progressbar=frametitle]{metropolis}
+
+% Change the width of the progress bar to make it more visible (Code taken from here: https://github.com/matze/mtheme/issues/237)
+\makeatletter
+\setlength{\metropolis@titleseparator@linewidth}{0.5pt} % Title page
+\setlength{\metropolis@progressonsectionpage@linewidth}{1.5pt} % Progress bar on section page
+\setlength{\metropolis@progressinheadfoot@linewidth}{2pt} % Progress bar in header
+\makeatother
+
+% Define UM colors
+\definecolor{UMBlue}{RGB}{0,44,85}
+\definecolor{UMLightBlue}{RGB}{0, 95, 150}
+\definecolor{UMYellow}{RGB}{255, 212, 70}
+\definecolor{UMRed}{RGB}{245, 62, 65}
+\definecolor{UMGreen}{RGB}{0, 170, 148}
+
+% Change frame title color
+\setbeamercolor{frametitle}{fg= black!2, bg=UMBlue}
+
+% Alert color
+\setbeamercolor{alerted text}{fg=UMLightBlue}
+\setbeamerfont{alerted text}{series=\bfseries}
+
+% Color for the progress bar
+\setbeamercolor{progress bar}{fg=UMLightBlue, bg=UMYellow}
+
+% Logo in the header -- comment it out if not necessary
+\usepackage{textpos} 
+\addtobeamertemplate{frametitle}{}{%
+    \begin{textblock*}{100mm}(0.99\textwidth,-0.3cm)
+        \includegraphics[width=1cm]{figures/UMlogo_footer.png}
+    \end{textblock*}}
+
+% Logo in the footer -- remove comment if you want the logo in the footer
+
+%\setbeamertemplate{footline}{%
+%  \begin{beamercolorbox}[wd=\textwidth, sep=1ex]{footline}%
+%	\includegraphics[width=3cm]{figures/UMlogo_footer.png}%
+%	\usebeamerfont{page number in head/foot}%
+%    \usebeamertemplate*{frame footer}
+%    \hfill%
+%    \usebeamertemplate*{frame numbering}
+%  \end{beamercolorbox}%
+% }
+
+
+% Define blocks
+\metroset{block=fill}
+\setbeamertemplate{blocks}[rounded][shadow]
+
+% Regular block
+\setbeamercolor{block title}{fg=black!2, bg=UMBlue}
+\setbeamercolor{block body}{fg=black, bg=gray!10!white}
+
+% Alert block
+\setbeamercolor{block title alerted}{fg=UMYellow, bg=UMBlue}
+\setbeamercolor{block body alerted}{fg=black, bg=gray!10!white}
+
+% Example block
+\setbeamercolor{block title example}{fg=black!2, bg=UMLightBlue}
+\setbeamercolor{block body example}{fg=black, bg=gray!10!white}
+
+
+% Make the line on the title thicker
+\setbeamertemplate{title page}{
+{%
+% Add the logo
+\begin{flushright}
+    \inserttitlegraphic
+    \end{flushright}
+    }
+% Add the title and the subtitle
+ {%
+    \usebeamercolor[fg]{title}
+    \usebeamerfont{title}
+        \inserttitle\\
+        \medskip
+        \textnormal{\large\insertsubtitle}
+    }
+    \par\smallskip
+% Define the line and the line width
+{%
+    \color{UMLightBlue!50!UMLightBlue}
+        \rule{\linewidth}{1.1pt}
+    }
+    \par\smallskip
+% Add the author
+    {%
+    \usebeamercolor[fg]{author}
+    \usebeamerfont{author}
+        \insertauthor
+    }\par\smallskip
+% Add the date
+    {%
+    \usebeamercolor[fg]{date}
+    \usebeamerfont{date}
+        \textnormal{\footnotesize\insertdate}
+    }\par
+% Add the institute
+    {%
+    \usebeamercolor[fg]{institute}
+    \usebeamerfont{institute}
+        \insertinstitute
+    }
+}
+
+
+%------------------------------------
+% Load other packages
+%------------------------------------
+\usepackage{appendixnumberbeamer}
+
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+% table alignment
+\usepackage{makecell} 
+\usepackage{arydshln}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\usepackage{hyperref}
+\pdfstringdefDisableCommands{%
+  \let\enspace\empty  % this causes the warning for \kern
+  \let\noindent\empty % this causes the warning for \indent
+}
+
+\usepackage{url}
+\DeclareUrlCommand\shorturl{\color{UMBlue}\def\UrlLeft{http://}\urlstyle{tt}}
+
+% Package for citation
+\usepackage[sort]{natbib}
+\bibliographystyle{apsr} % APSR style
+
+%------------------------------------
+% Highlight equations
+%------------------------------------
+% Adopted from Satoshi Murashige's (https://www.eqseqs.work/) code: 
+%https://eqseqs.hatenablog.com/entry/2019/10/11/092852
+%https://speakerdeck.com/eqs/example-slide-of-highlight-command
+
+% Add background color to math expressions
+\newcommand<>{\highlight}[2][red]{%
+    \alt#3{%
+        \tikz[baseline=(x.base)]{
+            \node[rectangle,rounded corners,fill=#1!10](x){$#2$};
+        }%
+    }{%
+        #2
+    }%
+}
+
+% Add background color and a caption to math expressions
+\newcommand<>{\highlightcap}[3][red]{%
+    \alt#4{%
+        \tikz[baseline=(x.base)]{
+            \node[rectangle,rounded corners,fill=#1!10](x){$#2$};
+            \node[anchor=north, color=#1, align=center] at (x.south) {#3};
+        }%
+    }{%
+        #2
+    }%
+}
+
+
+%------------------------------------
+% TikZ setting
+%------------------------------------
+\usepackage{venndiagram}
+\usetikzlibrary{matrix,shapes,arrows,fit,tikzmark}
+
+\usepackage{tkz-graph}
+% Tikz settings optimized for causal graphs.
+% Just copy-paste this part
+\usetikzlibrary{decorations,calc,arrows.meta,fit,positioning}
+\tikzset{
+    -Latex,auto,node distance =1 cm and 1 cm,semithick,
+    state/.style ={ellipse, draw, minimum width = 0.7 cm},
+    point/.style = {circle, draw, inner sep=0.04cm,fill,node contents={}},
+    bidirected/.style={Latex-Latex,dashed},
+    bidirecteds/.style={Latex-Latex},
+    el/.style = {inner sep=2pt, align=left, sloped}
+}
+
+% visible on
+\tikzset{
+  invisible/.style={opacity=0},
+  visible on/.style={alt={#1{}{invisible}}},
+  alt/.code args={<#1>#2#3}{%
+    \alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+  },
+}
+
+%------------------------------------
+% Code chunks
+%------------------------------------
+% For R code
+\usepackage{listings}
+\definecolor{Brown}{cmyk}{0,0.81,1,0.60}
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+\lstset{%
+  language=R,
+  frame=single,
+  stringstyle={\ttfamily},
+  commentstyle={\itshape\color{Brown}},
+  identifierstyle={\ttfamily\color{CadetBlue}\bfseries}, 
+  keywordstyle={\ttfamily\color{OliveGreen}},
+  basicstyle={\ttfamily\scriptsize},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  lineskip=-0.5pt,
+  showstringspaces=ture,
+  framerule=0.5pt
+}
+\newcommand{\brcode}{\begin{lstlisting}[language=R]}
+\newcommand{\ercode}{\end{lstlisting}}
+
