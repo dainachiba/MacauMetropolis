@@ -62,7 +62,6 @@
 
 
 % Define blocks
-\metroset{block=fill}
 \setbeamertemplate{blocks}[rounded][shadow]
 
 % Regular block
@@ -73,11 +72,57 @@
 \setbeamercolor{block title alerted}{fg=UMYellow, bg=UMBlue}
 \setbeamercolor{block body alerted}{fg=black, bg=gray!10!white}
 
-% Example block
-\setbeamercolor{block title example}{fg=black!2, bg=UMLightBlue}
-\setbeamercolor{block body example}{fg=black, bg=gray!10!white}
+%------------------------------------
+% Example block definition
+%------------------------------------
+\AtBeginEnvironment{exampleblock}{\setbeamercolor{itemize item}{fg=UMLightBlue}}
+\AtBeginEnvironment{exampleblock}{\setbeamercolor{itemize subitem}{fg=UMLightBlue}}
+\AtBeginEnvironment{exampleblock}{\setbeamercolor{enumerate item}{fg=UMLightBlue}}
+\AtBeginEnvironment{exampleblock}{\setbeamercolor{enumerate subitem}{fg=UMLightBlue}}
 
+\setbeamertemplate{block example begin}
+{
+  \par\vskip\medskipamount%
+  \ifx\insertblocktitle\@empty\newcommand{\yskiplength}{1.5ex}
+  \else\newcommand{\yskiplength}{2ex}
+  \fi
+  \begin{tikzpicture}
+    \node [
+      draw=UMBlue,
+      fill=black!2,
+      inner sep = 1ex,
+      inner ysep = \yskiplength,
+      text width=\paperwidth - 2cm - 5ex, 
+      minimum width=\paperwidth - 2cm - 1ex,
+      rounded corners
+    ] (BOXCONTENT) \bgroup%
+    \begin{minipage}{\textwidth}
+    \usebeamerfont{beamer body}%
+}
 
+\setbeamertemplate{block example end}
+{
+    \end{minipage}%
+    \egroup;
+    \ifx\insertblocktitle\@empty
+    \else%
+    {
+      \node[
+      fill=black!2,
+        anchor=west,
+        text=UMBlue,
+        inner ysep = 1.5pt,
+        rounded corners
+      ] at ([shift={(5pt,0)}]BOXCONTENT.north west) {\insertblocktitle};
+    }
+    \fi
+  \end{tikzpicture}
+  \vskip\smallskipamount
+}
+
+%------------------------------------
+% Title page
+%------------------------------------
 % Make the line on the title thicker
 \setbeamertemplate{title page}{
 {%
