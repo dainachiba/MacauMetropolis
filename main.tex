@@ -61,6 +61,18 @@
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 
 
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+{
+\setbeamercolor{background canvas}{bg=UMBlue}
+\begin{frame}
+
+ \color{UMYellow}{\bf\Large Use UMBlue as background color.}
+
+\end{frame}
+}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+
+
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 \begin{frame}{{\color{UMYellow} Highlighting} texts with blocks}
@@ -115,14 +127,15 @@ Available at {\footnotesize \href{https://github.com/matze/mtheme}{github.com/ma
 
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-\begin{frame}{Credit}
+{
+\usebackgroundtemplate{\includegraphics[height=\paperheight]{figures/UMcampus}}
+\frame{
 
-This template is indebted to ...
-\begin{itemize}
-    \item Matthias Vogelgesang for \href{https://github.com/matze/mtheme}{Metropolis theme}
-    \item \href{https://www.eqseqs.work/}{Satoshi Murashige} for \href{https://eqseqs.hatenablog.com/entry/2019/10/11/092852}{a command to highlight equations} (see slide 7 of this template)
-\end{itemize}
-\end{frame}
+\color{white} \large
+We can insert a background image like this.
+
+	}
+}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 
 
