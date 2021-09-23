@@ -63,7 +63,7 @@
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 {
-\setbeamercolor{background canvas}{bg=UMBlue}
+\setbeamercolor{background canvas}{bg=UMLightBlue}
 \begin{frame}
 
  \color{UMYellow}{\bf\Large Use UMBlue as background color.}
@@ -201,14 +201,14 @@ p(\theta | x) \propto
 Security dilemma:
 \begin{center}
 \begin{tikzpicture}
-    \node (1) [visible on=<1->] at (2,4) {\bf{State A arms}};
-    \node (2) [visible on=<2->,text width=3cm, align=center] at (4,2) {\bf{State B feels\\[.1em] insecure}};
-    \node (3) [visible on=<3->] at (2,0) {\bf{State B arms}};
-    \node (4) [visible on=<4->,text width=3cm, align=center] at (0,2) {\bf{State A feels\\[.1em] insecure}};
-	\path (1) edge[line width=1.5, bend left = 40,visible on=<2->] (2);
-	\path (2) edge[line width=1.5, bend left = 40,visible on=<3->] (3);
-	\path (3) edge[line width=1.5, bend left = 40,visible on=<4->] (4);
-	\path (4) edge[line width=1.5, bend left = 40,visible on=<5->] (1);
+    \node (1) [visible on=<1->] at (2,4) {\bf{\color{UMLightBlue} State A arms}};
+    \node (2) [visible on=<2->,text width=3cm, align=center] at (4,2) {\bf{\color{UMRed} State B feels\\[.1em] insecure}};
+    \node (3) [visible on=<3->] at (2,0) {\bf{\color{UMGreen} State B arms}};
+    \node (4) [visible on=<4->,text width=3cm, align=center] at (0,2) {\bf{\color{UMYellow} State A feels\\[.1em] insecure}};
+	\path (1) edge[line width=1.5, bend left = 40,visible on=<2->, color=UMLightBlue] (2);
+	\path (2) edge[line width=1.5, bend left = 40,visible on=<3->, color=UMRed] (3);
+	\path (3) edge[line width=1.5, bend left = 40,visible on=<4->, color=UMGreen] (4);
+	\path (4) edge[line width=1.5, bend left = 40,visible on=<5->, color=UMYellow] (1);
 \end{tikzpicture}
 \end{center}
 

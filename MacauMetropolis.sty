@@ -17,11 +17,14 @@
 % Load the Metropolis theme
 \usetheme[progressbar=frametitle]{metropolis}
 
+
 % Change the width of the progress bar to make it more visible (Code taken from here: https://github.com/matze/mtheme/issues/237)
 \makeatletter
 \setlength{\metropolis@titleseparator@linewidth}{0.5pt} % Title page
 \setlength{\metropolis@progressonsectionpage@linewidth}{1.5pt} % Progress bar on section page
 \setlength{\metropolis@progressinheadfoot@linewidth}{2pt} % Progress bar in header
+% If you want to change the height of the header, remove comment below
+%\setlength{\metropolis@frametitle@padding}{1.6ex}% <- default 2.2 ex
 \makeatother
 
 % Define UM colors
@@ -32,20 +35,20 @@
 \definecolor{UMGreen}{RGB}{0, 170, 148}
 
 % Change frame title color
-\setbeamercolor{frametitle}{fg= black!2, bg=UMBlue}
+\setbeamercolor{frametitle}{fg= black!2, bg=UMLightBlue}
 
 % Alert color
 \setbeamercolor{alerted text}{fg=UMLightBlue}
 \setbeamerfont{alerted text}{series=\bfseries}
 
 % Color for the progress bar
-\setbeamercolor{progress bar}{fg=UMLightBlue, bg=UMYellow}
+\setbeamercolor{progress bar}{fg=UMRed, bg=UMGreen}
 
 % Logo in the header -- comment it out if not necessary
 \usepackage{textpos} 
 \addtobeamertemplate{frametitle}{}{%
-    \begin{textblock*}{100mm}(0.99\textwidth,-0.3cm)
-        \includegraphics[width=1cm]{figures/UMlogo_footer.png}
+    \begin{textblock*}{100mm}(0.99\textwidth,-0.4cm)
+        \includegraphics[width=1cm]{figures/UM-Icon_Horizontalwhite.png}
     \end{textblock*}}
 
 % Logo in the footer -- remove comment if you want the logo in the footer
@@ -65,7 +68,7 @@
 \setbeamertemplate{blocks}[rounded][shadow]
 
 % Regular block
-\setbeamercolor{block title}{fg=black!2, bg=UMBlue}
+\setbeamercolor{block title}{fg=black!2, bg=UMLightBlue}
 \setbeamercolor{block body}{fg=black, bg=gray!10!white}
 
 % Alert block
