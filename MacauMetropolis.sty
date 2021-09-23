@@ -4,20 +4,12 @@
 % Last modified: 2021-03-15
 %------------------------------------
 
-% Font (Remove the option 'sfdefault' if you don't like sans serif)
-\usepackage[sfdefault,light,condensed]{roboto}
-
-% Math font
-\usepackage{newpxmath} % newtxmath
+% Load the Metropolis theme
+\usetheme[progressbar=frametitle]{metropolis}
 
 %------------------------------------
 % Define parameters for the theme
 %------------------------------------
-
-% Load the Metropolis theme
-\usetheme[progressbar=frametitle]{metropolis}
-
-
 % Change the width of the progress bar to make it more visible (Code taken from here: https://github.com/matze/mtheme/issues/237)
 \makeatletter
 \setlength{\metropolis@titleseparator@linewidth}{0.5pt} % Title page
@@ -34,25 +26,69 @@
 \definecolor{UMRed}{RGB}{245, 62, 65}
 \definecolor{UMGreen}{RGB}{0, 170, 148}
 
-% Change frame title color
+
+%------------------------------------
+% UM Light Blue as the main color
+%------------------------------------
+% Frame title color
 \setbeamercolor{frametitle}{fg= black!2, bg=UMLightBlue}
+
+% Color for the progress bar
+\setbeamercolor{progress bar}{fg=UMRed, bg=UMGreen}
 
 % Alert color
 \setbeamercolor{alerted text}{fg=UMLightBlue}
 \setbeamerfont{alerted text}{series=\bfseries}
 
-% Color for the progress bar
-\setbeamercolor{progress bar}{fg=UMRed, bg=UMGreen}
+%------------------------------------
+% If you want UM Blue as the main 
+% color, remove comment from the 
+% following two lines
+%------------------------------------
+%\setbeamercolor{frametitle}{fg= black!2, bg=UMBlue} % Frame title color
+%\setbeamercolor{progress bar}{fg=UMYellow, bg=UMLightBlue} % Progress bar
+
+
+%------------------------------------
+% UM Logo
+%------------------------------------
+\usepackage{textpos} 
 
 % Logo in the header -- comment it out if not necessary
-\usepackage{textpos} 
+
+%-------------
+% Version 1
+%-------------
+% If you want a simpler logo (um澳大) in white...
 \addtobeamertemplate{frametitle}{}{%
     \begin{textblock*}{100mm}(0.99\textwidth,-0.4cm)
         \includegraphics[width=1cm]{figures/UM-Icon_Horizontalwhite.png}
     \end{textblock*}}
 
-% Logo in the footer -- remove comment if you want the logo in the footer
+%-------------
+% Version 2
+%-------------
+% If you want a simpler logo (um澳大) in yellow...
+%\addtobeamertemplate{frametitle}{}{%
+%    \begin{textblock*}{100mm}(0.99\textwidth,-0.4cm)
+%        \includegraphics[width=1cm]{figures/UM-Icon_Horizontalyellow.png}
+%    \end{textblock*}}
 
+%-------------
+% Version 3
+%-------------
+% If you want a bigger logo ...
+%\addtobeamertemplate{frametitle}{}{%
+%    \begin{textblock*}{100mm}(0.87\textwidth,-1.3cm)
+%        \includegraphics[width=2.3cm]{figures/UM-Logo_H-White.png}
+%    \end{textblock*}}
+
+
+
+%------------------------------------
+% Footer
+%------------------------------------
+% Logo in the footer -- remove comment if you want the logo in the footer
 %\setbeamertemplate{footline}{%
 %  \begin{beamercolorbox}[wd=\textwidth, sep=1ex]{footline}%
 %	\includegraphics[width=3cm]{figures/UMlogo_footer.png}%
@@ -64,7 +100,9 @@
 % }
 
 
+%------------------------------------
 % Define blocks
+%------------------------------------
 \setbeamertemplate{blocks}[rounded][shadow]
 
 % Regular block
@@ -173,6 +211,12 @@
 %------------------------------------
 % Load other packages
 %------------------------------------
+% Font (Remove the option 'sfdefault' if you don't like sans serif)
+\usepackage[sfdefault,light,condensed]{roboto}
+
+% Math font
+\usepackage{newpxmath} % newtxmath
+
 \usepackage{appendixnumberbeamer}
 
 \usepackage{booktabs}
