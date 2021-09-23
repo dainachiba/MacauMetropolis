@@ -60,10 +60,10 @@
 % Version 1
 %-------------
 % If you want a simpler logo (um澳大) in white...
-\addtobeamertemplate{frametitle}{}{%
-    \begin{textblock*}{100mm}(0.99\textwidth,-0.4cm)
-        \includegraphics[width=1cm]{figures/UM-Icon_Horizontalwhite.png}
-    \end{textblock*}}
+%\addtobeamertemplate{frametitle}{}{%
+%    \begin{textblock*}{100mm}(0.99\textwidth,-0.4cm)
+%        \includegraphics[width=1cm]{figures/UM-Icon_Horizontalwhite.png}
+%    \end{textblock*}}
 
 %-------------
 % Version 2
@@ -78,10 +78,10 @@
 % Version 3
 %-------------
 % If you want a bigger logo ...
-%\addtobeamertemplate{frametitle}{}{%
-%    \begin{textblock*}{100mm}(0.87\textwidth,-1.3cm)
-%        \includegraphics[width=2.3cm]{figures/UM-Logo_H-White.png}
-%    \end{textblock*}}
+\addtobeamertemplate{frametitle}{}{%
+    \begin{textblock*}{100mm}(0.87\textwidth,-1.3cm)
+        \includegraphics[width=2.3cm]{figures/UM-Logo_H-White.png}
+    \end{textblock*}}
 
 
 
@@ -110,8 +110,8 @@
 \setbeamercolor{block body}{fg=black, bg=gray!10!white}
 
 % Alert block
-\setbeamercolor{block title alerted}{fg=UMYellow, bg=UMBlue}
-\setbeamercolor{block body alerted}{fg=black, bg=gray!10!white}
+\setbeamercolor{block title alerted}{fg=white, bg=UMLightBlue}
+\setbeamercolor{block body alerted}{fg=white, bg=UMLightBlue}
 
 %------------------------------------
 % Example block definition
@@ -129,7 +129,7 @@
   \fi
   \begin{tikzpicture}
     \node [
-      draw=UMBlue,
+      draw=UMLightBlue,
       fill=black!2,
       inner sep = 1ex,
       inner ysep = \yskiplength,
@@ -168,10 +168,15 @@
 \setbeamertemplate{title page}{
 {%
 % Add the logo
-\begin{flushright}
-    \inserttitlegraphic
-    \end{flushright}
+%\begin{flushright}
+%    \inserttitlegraphic
+%    \end{flushright}
+
+    \begin{textblock*}{100mm}(0.75\textwidth, 4cm)
+        \inserttitlegraphic
+    \end{textblock*}
     }
+
 % Add the title and the subtitle
  {%
     \usebeamercolor[fg]{title}
@@ -239,7 +244,7 @@
 }
 
 \usepackage{url}
-\DeclareUrlCommand\shorturl{\color{UMBlue}\def\UrlLeft{http://}\urlstyle{tt}}
+\DeclareUrlCommand\shorturl{\color{UMLightBlue}\def\UrlLeft{https://}\urlstyle{tt}}
 
 % Package for citation
 \usepackage[sort]{natbib}
