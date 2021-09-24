@@ -44,20 +44,53 @@
 
 {\color{UMBlue}\bf UMBlue} is the symbol color of the university.
 
-In addition, UM's Brand Guidelines document defines the following colors:
+In addition, the package provides the following colors:
 \begin{itemize}
     \item {\color{UMLightBlue}\bf UMLightBlue}
     \item {\color{UMYellow}\bf UMYellow}
 	\item {\color{UMRed}\bf UMRed}
 	\item {\color{UMGreen}\bf UMGreen}
 \end{itemize}
+
+\vspace{10pt}
+See UM's Brand Guidelines document (\href{https://identity.co.um.edu.mo/wp-content/uploads/2021/06/University-of-Macau-Brand-Guidelines.pdf}{\myURL link to PDF}; internal access only) for more details on the colors.
 \end{frame}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+\begin{frame}{{\color{UMYellow} Highlighting} texts with blocks}
+
+Four types of blocks are available:
+\bigskip
+
+\begin{columns}
+	\column{0.49\linewidth}
+		\begin{block}{}
+		This is a block without a title. So there is no title in this block. This is a block without a title. So there is no title in this block. 
+
+		\end{block}
+	\column{0.49\linewidth}
+		\begin{block}{Block Title}
+		A \emph{default} block with a title
+		\end{block}
+
+		\begin{alertblock}{Block Title}
+		An \emph{alert} block with a title
+		\end{alertblock}
+
+\end{columns} 
+		\begin{exampleblock}{Block Title}
+		An \emph{example} block with a title
+		\end{exampleblock}
+\end{frame}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 \begin{frame}{Logos and icons}
 
-Logos and icons are not included in the package. Please download them from UM website (internal access only): \shorturl{identity.co.um.edu.mo/} 
+Logo and icon files are \alert{not} included in the package. 
 
 Logos
 	\begin{columns}
@@ -81,49 +114,9 @@ Icons
         \includegraphics[height=1cm]{figures/UM-Icon_Horizontalyellow.png}
 	\end{columns} 
 
-\end{frame}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+\vspace{10pt}
+Please download them from \href{https://identity.co.um.edu.mo/}{\myURL UM's identity website} (internal only).
 
-
-
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-{
-\setbeamercolor{background canvas}{bg=UMLightBlue}
-\begin{frame}
-
- \color{UMYellow}{\bf\Large Use UMBlue as background color.}
-
-\end{frame}
-}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-
-
-
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
-\begin{frame}{{\color{UMYellow} Highlighting} texts with blocks}
-
-Four types of blocks are available:
-\bigskip
-
-\begin{columns}
-	\column{0.49\linewidth}
-		\begin{block}{}
-		This is a block without a title. So there is no title in this block. This is a block without a title. So there is no title in this block. This is a block without a title. So there is no title in this block. 
-
-		\end{block}
-	\column{0.49\linewidth}
-		\begin{block}{Block Title}
-		A \emph{default} block with a title
-		\end{block}
-
-		\begin{alertblock}{Block Title}
-		An \emph{alert} block with a title
-		\end{alertblock}
-
-\end{columns} 
-		\begin{exampleblock}{Block Title}
-		An \emph{example} block with a title
-		\end{exampleblock}
 \end{frame}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 
@@ -132,23 +125,36 @@ Four types of blocks are available:
 \begin{frame}{{\color{UMYellow} What you need} to typeset this template}
 
 \begin{exampleblock}{Metropolis theme}
-Available at {\footnotesize \href{https://github.com/matze/mtheme}{github.com/matze/mtheme}}	
+Available from \href{https://github.com/matze/mtheme}{\myURL github.com/matze/mtheme}	
 \end{exampleblock}
 
-\begin{exampleblock}{UM logo files}
+\begin{exampleblock}{UM logo \& icon files}
 \begin{itemize}
-\item Available from \href{https://identity.co.um.edu.mo/}{UM's website} (internal access only)
-\item Download the following two: 
+\item Go to \href{https://identity.co.um.edu.mo/}{\myURL UM's identity website} (internal access only)
+\item Download \underline{all the .png} files from
 	\begin{enumerate}
-	\item \href{linktoUM}{\footnotesize {UMlogo.png}}
-	\item \href{linktoUM}{\footnotesize {UMlogo\_footer.png}}
+	\item \href{https://identity.co.um.edu.mo/university-logo/}{\myURL Logo page}
+	\item \href{https://identity.co.um.edu.mo/university-icon/}{\myURL Icon page}
 	\end{enumerate}
-\item Save these logo files under the {\tt \footnotesize figures} directory located in the same directory that contains the .tex file.
+\item Save the .png files under the {\tt \footnotesize figures} sub-directory 
 \end{itemize}
 \end{exampleblock}
 
 \end{frame}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+{
+\setbeamercolor{background canvas}{bg=UMLightBlue}
+\begin{frame}
+
+ \color{UMYellow}{\bf\Large UMLightBlue as background color}
+
+\end{frame}
+}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+
 
 
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
@@ -338,15 +344,15 @@ fit <- lm(Sepal.Length ~ Sepal.Width + Species, data = iris)
 \begin{frame}[fragile]\frametitle{Code to produce the figure}
 
 \begin{lstlisting}[language=R]
-# Kobe colors (brick, green, and blue)
-kobe_colors <- c("#c40000", "#16832e", "#0e2f92")
+# UM colors (red, green, blue)
+um_colors <- c("#F53E41", "#00AA94", "#005F96")
 
 # Plot: require ggplot2 and data(iris)
 p <- ggplot(iris, aes(x = Sepal.Width, y = Sepal.Length, 
                       color = Species))
 p + geom_point() + geom_smooth() + 
   facet_wrap(~Species) + guides(color = "none") + 
-  scale_color_manual(values = kobe_colors) + 
+  scale_color_manual(values = um_colors) + 
   labs(x = "Sepal Width", y = "Sepal Length", 
        caption = "Source: Iris data") + 
   theme(

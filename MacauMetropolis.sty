@@ -237,11 +237,13 @@
 \usepackage{xspace}
 \newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
 
-\usepackage{hyperref}
 \pdfstringdefDisableCommands{%
   \let\enspace\empty  % this causes the warning for \kern
   \let\noindent\empty % this causes the warning for \indent
 }
+
+% URL style
+\def \myURL {\color{UMLightBlue}}
 
 \usepackage{url}
 \DeclareUrlCommand\shorturl{\color{UMLightBlue}\def\UrlLeft{https://}\urlstyle{tt}}
