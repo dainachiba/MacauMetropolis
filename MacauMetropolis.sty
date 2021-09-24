@@ -7,6 +7,8 @@
 % Load the Metropolis theme
 \usetheme[progressbar=frametitle]{metropolis}
 
+\usepackage{textpos}
+
 %------------------------------------
 % Define parameters for the theme
 %------------------------------------
@@ -39,65 +41,6 @@
 % Alert color
 \setbeamercolor{alerted text}{fg=UMLightBlue}
 \setbeamerfont{alerted text}{series=\bfseries}
-
-%------------------------------------
-% If you want UM Blue as the main 
-% color, remove comment from the 
-% following two lines
-%------------------------------------
-%\setbeamercolor{frametitle}{fg= black!2, bg=UMBlue} % Frame title color
-%\setbeamercolor{progress bar}{fg=UMYellow, bg=UMLightBlue} % Progress bar
-
-
-%------------------------------------
-% UM Logo
-%------------------------------------
-\usepackage{textpos} 
-
-% Logo in the header -- comment it out if not necessary
-
-%-------------
-% Version 1
-%-------------
-% If you want a simpler logo (um澳大) in white...
-%\addtobeamertemplate{frametitle}{}{%
-%    \begin{textblock*}{100mm}(0.99\textwidth,-0.4cm)
-%        \includegraphics[width=1cm]{figures/UM-Icon_Horizontalwhite.png}
-%    \end{textblock*}}
-
-%-------------
-% Version 2
-%-------------
-% If you want a simpler logo (um澳大) in yellow...
-%\addtobeamertemplate{frametitle}{}{%
-%    \begin{textblock*}{100mm}(0.99\textwidth,-0.4cm)
-%        \includegraphics[width=1cm]{figures/UM-Icon_Horizontalyellow.png}
-%    \end{textblock*}}
-
-%-------------
-% Version 3
-%-------------
-% If you want a bigger logo ...
-\addtobeamertemplate{frametitle}{}{%
-    \begin{textblock*}{100mm}(0.87\textwidth,-1.3cm)
-        \includegraphics[width=2.3cm]{figures/UM-Logo_H-White.png}
-    \end{textblock*}}
-
-
-
-%------------------------------------
-% Footer
-%------------------------------------
-% Logo in the footer -- remove comment if you want the logo in the footer
-%\setbeamertemplate{footline}{%
-%  \begin{beamercolorbox}[wd=\textwidth, sep=1ex]{footline}%
-%	\includegraphics[width=3cm]{figures/UMlogo_footer.png}%
-%	\usebeamerfont{page number in head/foot}%
-%    \usebeamertemplate*{frame footer}
-%    \hfill%
-%    \usebeamertemplate*{frame numbering}
-%  \end{beamercolorbox}%
-% }
 
 
 %------------------------------------
