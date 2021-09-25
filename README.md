@@ -7,11 +7,9 @@
 
 **Daina Chiba**, Associate Professor of Political Science, *University of Macau*
 
-This is an *unofficial*[^1] LaTeX Beamer theme for the University of Macau. 
+This is an unofficial LaTeX Beamer theme for the University of Macau. 
 
 ![Screenshot](Screenshots.jpg)
-
-[^1]: If you want the *official* templates for PowerPoint, [click here](https://identity.co.um.edu.mo/download/templates-of-letterhead-and-powerpoints-for-internal-use-only/)(internal access only).
 
 ## Update
 
@@ -25,5 +23,7 @@ I do not have the rights to distribute University of Macau's logo and icon files
 
 Once you have all the files, you can typeset ``main_UM*.tex`` using XeLaTeX to produce presentation slides (``main_UM*.pdf``).
 
+## For PowerPoint users
 
+If you want PowerPoint templates, you can find them on University of Macau's [official templates here](https://identity.co.um.edu.mo/download/templates-of-letterhead-and-powerpoints-for-internal-use-only/)(internal access only).
 
