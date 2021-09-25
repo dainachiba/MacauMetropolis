@@ -43,6 +43,5 @@ fit.1 <- update(fit.0, data = subset(iris, Species == "setosa"))
 fit.2 <- update(fit.0, data = subset(iris, Species == "versicolor"))
 fit.3 <- update(fit.0, data = subset(iris, Species == "virginica"))
 
-library(stargazer)
 stargazer(fit.1, fit.2, fit.3, type = "text")
 
