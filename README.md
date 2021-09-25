@@ -9,7 +9,7 @@
 
 This is an *unofficial* LaTeX Beamer theme for University of Macau. 
 
-![Screenshot](Screenshots.pdf)
+![Screenshot](Screenshots.jpg)
 
 ## Update
 
