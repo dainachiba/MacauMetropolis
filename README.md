@@ -25,5 +25,5 @@ Once you have all the files, you can typeset ``main_UM*.tex`` using XeLaTeX to p
 
 ## For PowerPoint users
 
-If you want PowerPoint templates, you can find them on University of Macau's [official templates here](https://identity.co.um.edu.mo/download/templates-of-letterhead-and-powerpoints-for-internal-use-only/)(internal access only).
+If you want PowerPoint templates, you can find University of Macau's official PPT templates on their [template page](https://identity.co.um.edu.mo/download/templates-of-letterhead-and-powerpoints-for-internal-use-only/) (internal access only).
 
