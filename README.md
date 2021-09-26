@@ -3,11 +3,11 @@
 **Version 0.01 uploaded**
 
 
-# An Unofficial LaTeX Beamer style file package for the University of Macau
+# An Unofficial LaTeX Beamer theme package for the University of Macau
 
 **Daina Chiba**, Associate Professor of Political Science, *University of Macau*
 
-This is an unofficial LaTeX Beamer [Metropolis](https://github.com/matze/mtheme) theme for the University of Macau. If you'd like to take a look at example slides, try the [UM Light Blue version](main_UMLightBlue.pdf) or the [UM Blue version](main_UMBlue.pdf).
+This is an unofficial LaTeX Beamer [Metropolis](https://github.com/matze/mtheme) style file package for the University of Macau. If you'd like to see example slides, please take a look at the [UM Light Blue version](main_UMLightBlue.pdf) or the [UM Blue version](main_UMBlue.pdf).
 
 ![Screenshot](Screenshots.jpg)
 
