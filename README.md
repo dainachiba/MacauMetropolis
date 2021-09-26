@@ -7,7 +7,7 @@
 
 **Daina Chiba**, Associate Professor of Political Science, *University of Macau*
 
-This is an unofficial LaTeX Beamer [Metropolis](https://github.com/matze/mtheme) theme for the University of Macau. If you'd like to take a look at example slides, try the [UM Light Blue version](https://github.com/dainachiba/MacauMetropolis/raw/master/main_UMLightBlue.pdf) or the [UM Blue version](https://github.com/dainachiba/MacauMetropolis/raw/master/main_UMBlue.pdf).
+This is an unofficial LaTeX Beamer [Metropolis](https://github.com/matze/mtheme) theme for the University of Macau. If you'd like to take a look at example slides, try the [UM Light Blue version](main_UMLightBlue.pdf) or the [UM Blue version](main_UMBlue.pdf).
 
 ![Screenshot](Screenshots.jpg)
 
