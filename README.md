@@ -16,7 +16,7 @@ This is an unofficial LaTeX Beamer [Metropolis](https://github.com/matze/mtheme)
 Version 0.01 was uploaded on September 25, 2021.
 
 ## Usage
-Install LaTeX, Beamer, and [Metropolis](https://github.com/matze/mtheme). If you use [TeX Live](https://tug.org/texlive/) or [MikTeX](https://miktex.org/), you probably have them already.
+Install LaTeX, Beamer, and [Metropolis](https://github.com/matze/mtheme) if necessary. If you use [TeX Live](https://tug.org/texlive/) or [MikTeX](https://miktex.org/), you probably don't have to.
 
 Download one or both of the template files (``main_UMLightBlue.tex`` or ``main_UMBlue.tex``; these two files differ only in colors), the style file ``MacauMetropolis.sty``, the .bib file ``literature.bib``, and the ``figures`` folder (along with its contents). Place all these files and folders in one directory. 
 
