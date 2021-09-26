@@ -3,7 +3,7 @@
 **Version 0.01 uploaded**
 
 
-# An Unofficial LaTeX Beamer style file for University of Macau
+# An Unofficial LaTeX Beamer style file package for the University of Macau
 
 **Daina Chiba**, Associate Professor of Political Science, *University of Macau*
 
