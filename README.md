@@ -7,7 +7,7 @@
 
 **Daina Chiba**, Associate Professor of Political Science, *University of Macau*
 
-This is an unofficial LaTeX Beamer theme for the University of Macau. 
+This is an unofficial LaTeX Beamer [Metropolis](https://github.com/matze/mtheme) theme for the University of Macau. If you'd like to take a look at example slides, try the [UM Light Blue version](https://github.com/dainachiba/MacauMetropolis/raw/master/main_UMLightBlue.pdf) or the [UM Blue version](https://github.com/dainachiba/MacauMetropolis/raw/master/main_UMBlue.pdf).
 
 ![Screenshot](Screenshots.jpg)
 
@@ -16,8 +16,9 @@ This is an unofficial LaTeX Beamer theme for the University of Macau.
 Version 0.01 was uploaded on September 25, 2021.
 
 ## Usage
+Install LaTeX, Beamer, and [Metropolis](https://github.com/matze/mtheme). If you use [TeX Live](https://tug.org/texlive/) or [MikTeX](https://miktex.org/), you probably have them already.
 
-Download one or both of the template files (``main_UMLightBlue.tex`` or ``main_UMBlue.tex``; these two files differ only in colors), the style file ``MacauMetropolis.sty``, and the ``figures`` folder (along with its contents). Place all these files and folders in one directory. 
+Download one or both of the template files (``main_UMLightBlue.tex`` or ``main_UMBlue.tex``; these two files differ only in colors), the style file ``MacauMetropolis.sty``, the .bib file ``literature.bib``, and the ``figures`` folder (along with its contents). Place all these files and folders in one directory. 
 
 I do not have the rights to distribute University of Macau's logo and icon files, so these files are not included in the package. You need to download these files directly from University of Macau's [identity website](https://identity.co.um.edu.mo/) (internal access only). I suggest you download all the ``.png`` files from the [logo page](https://identity.co.um.edu.mo/university-logo/) and [icon page](https://identity.co.um.edu.mo/university-icon/), and place them in the ``figures`` sub-folder under the current directory. To download campus pictures, please go to another [identity webpage](https://www.um.edu.mo/about-um/identity/) (public access) by the University of Macau and click on the ``Desktop Wallpapers`` link. Move the downloaded .zip file to the ``figures`` directory and extract it there, so that you will have ``figures/Desktop-Wallpapers/Desktop Wallpaper (ver 1).jpg``. 
 
