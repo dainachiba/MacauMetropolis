@@ -274,9 +274,9 @@ f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left[ - \frac{(x-\mu)^2}{2\sigma^2} \
 Posterior probability (highlight added later):
 \begin{equation*}
 p(\theta | x) \propto 
-	\highlightcap<2->[UMGreen]{p(x | \theta)}{\footnotesize Likelihood}
+	\highlightcap<2->[UMRed]{p(x | \theta)}{\footnotesize Likelihood}
 	~\times~
-	\highlightcap<2->[UMRed]{p(\theta)}{\footnotesize Prior}
+	\highlightcap<2->[UMLightBlue]{p(\theta)}{\footnotesize Prior}
 \end{equation*}
 
 \end{frame}
@@ -292,12 +292,12 @@ Security dilemma:
 \begin{tikzpicture}
     \node (1) [visible on=<1->] at (2,4) {\bf{\color{UMLightBlue} State A arms}};
     \node (2) [visible on=<2->,text width=3cm, align=center] at (4,2) {\bf{\color{UMRed} State B feels\\[.1em] insecure}};
-    \node (3) [visible on=<3->] at (2,0) {\bf{\color{UMGreen} State B arms}};
-    \node (4) [visible on=<4->,text width=3cm, align=center] at (0,2) {\bf{\color{UMYellow} State A feels\\[.1em] insecure}};
+    \node (3) [visible on=<3->] at (2,0) {\bf{\color{UMLightBlue} State B arms}};
+    \node (4) [visible on=<4->,text width=3cm, align=center] at (0,2) {\bf{\color{UMRed} State A feels\\[.1em] insecure}};
 	\path (1) edge[line width=1.5, bend left = 40,visible on=<2->, color=UMLightBlue] (2);
 	\path (2) edge[line width=1.5, bend left = 40,visible on=<3->, color=UMRed] (3);
-	\path (3) edge[line width=1.5, bend left = 40,visible on=<4->, color=UMGreen] (4);
-	\path (4) edge[line width=1.5, bend left = 40,visible on=<5->, color=UMYellow] (1);
+	\path (3) edge[line width=1.5, bend left = 40,visible on=<4->, color=UMLightBlue] (4);
+	\path (4) edge[line width=1.5, bend left = 40,visible on=<5->, color=UMRed] (1);
 \end{tikzpicture}
 \end{center}
 

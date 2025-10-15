@@ -27,7 +27,7 @@
 \definecolor{UMYellow}{RGB}{255, 212, 70}
 \definecolor{UMRed}{RGB}{245, 62, 65}
 \definecolor{UMGreen}{RGB}{0, 170, 148}
-
+\definecolor{UMLOrange}{RGB}{242,160,57} % orange from UM Library
 
 %------------------------------------
 % UM Light Blue as the main color
@@ -39,7 +39,8 @@
 \setbeamercolor{progress bar}{fg=UMRed, bg=UMGreen}
 
 % Alert color
-\setbeamercolor{alerted text}{fg=UMLightBlue}
+% \setbeamercolor{alerted text}{fg=UMLightBlue}
+\setbeamercolor{alerted text}{fg=UMRed}
 \setbeamerfont{alerted text}{series=\bfseries}
 
 
@@ -186,7 +187,7 @@
 }
 
 % URL style
-\def \myURL {\color{UMLightBlue}}
+\def \myURL {\color{UMRed}}
 
 \usepackage{url}
 \DeclareUrlCommand\shorturl{\color{UMLightBlue}\def\UrlLeft{https://}\urlstyle{tt}}
